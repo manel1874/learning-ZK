@@ -7,9 +7,9 @@ This is a personal repository where I will save my solutions to the exercises as
 ## My progress
 
 - Session 1 (Monday 1/9) Introduction to ZK (Brian Gu)
->- Recording Link   [x]
->- Lecture Notes    [ ]
->- Exercises        [ ]
+>- [x] Recording Link   
+>- [ ] Lecture Notes    
+>- [ ] Exercises        
 
 - Session 2 (Wednesday 1/11) Circom 1 (Brian Gu)
 -> Recording Link   [x]
