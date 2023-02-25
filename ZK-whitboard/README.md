@@ -6,7 +6,7 @@ This includes some notes I took from watching [ZK Whiteboard Sessions](https://w
 
 ## My progress
 
-- [x] Module 1: #### What is a SNARK? by Dan Boneh
+- [x]  ** Module 1: What is a SNARK? by Dan Boneh **
 
 - SNARK: the proof is "short" (log(lenght of circuit)) and "fast" to verify
 - Usecases: Zcash, Tornado cash, IronFish, Aleo (Private Dapps).
