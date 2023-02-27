@@ -33,7 +33,7 @@ SNARK friendly format:
 - Zero knowledge definition: (informally) is zk if verifier can generate (an indistinguishable) proof by itself. "by itself" = "using a simulator".
 
 
-### [x] Module 2: Building a SNARK, pt 1 by Dan Boneh
+- [x] Module 2: Building a SNARK, pt 1 by Dan Boneh
 
 - General paradigm for SNARK:
 1. Functional commitment scheme (commit to a function: polynomial, multilinear, linear)
@@ -91,7 +91,7 @@ The Snark:
 
 
 
-### [x] Module 3: Building a SNARK, pt 2 by Dan Boneh
+- [x] Module 3: Building a SNARK, pt 2 by Dan Boneh
 
 #### Polynomial IOP:
 
@@ -106,7 +106,7 @@ H = {1, w, w^2, ..., w^(k-1)} where w is a k-th root of unity
 ```
 3. Prod-check:
 ```math
-\Pi_{a\in H} f(a) = c
+\prod_{a\in H} f(a) = c
 ```
 
 #### Plonk (poly-IOP for general circuit)
@@ -117,19 +117,65 @@ H = {1, w, w^2, ..., w^(k-1)} where w is a k-th root of unity
 Extensions: PLONKUP: handle circuits with more general gates than + and x (use lookup tables)
 
 
-### [x] Module 4: SNARKs vs STARKs with Bobbin Threadbare
+- [x] Module 4: SNARKs vs STARKs with Bobbin Threadbare
 
 
-### [x] Module 5: PLONK and Custom Gates with Adrian Hamelink
+Scalable (no need of preprocessing)
+Transparent (no trusted setup)
+(STARKs could be interactive - can have non-interactive STARKs)
+
+Components:
+- Arithmetization
+- PCS
+
+#### Arithmetazation
+
+- Take a program ---> transform into a bunch of statements related with polynomials
+
+Example:
+- R1CS (Rank-1 Constraint System) --> Mostly for SNARKs (scalability does not work here)
+- AIR (Algebraic Intermediate Representation) --> Mostly for STARKs
+
+Polynomial Commitment Schemes:
+- KZG --> Mostly for SNARKs (EC) 					(very small proofs)
+- IPA --> Mostly for SNARKs (EC) (Also transparent) (large proofs)
+- FRI --> Mostly for STARKs (Hash) 					(small proofs)
+
+##### AIR
+
+Minute: 24
 
 
-### [x] Module 6: Lookup Tables for Performance Optimisation
+- [x] Module 5: PLONK and Custom Gates with Adrian Hamelink
 
 
-### [x] Module 7: Zero Knowledge Virtual Machines (zkVM) with grjte
+- [x] Module 6: Lookup Tables for Performance Optimisation
+
+Lookup arguments
 
 
+- [x] Module 7: Zero Knowledge Virtual Machines (zkVM) with grjte
 
+#### Building Blocks
+
+- CPU
+- RAM (use Lookup arguments)
+- Spec. circuits
+- Recursion
+
+#### Miden execution trace
+
+[Miden -Polygon](https://polygon.technology/solutions/polygon-miden)
+
+- [ ] Module 8: Achieving Decentralised Private Computation with Pratyush Mishra
+
+Resource links: 
+- The Zerocash Paper: ia.cr/2014/349
+- The ZEXE Paper: ia.cr/2018/962
+- The VERI-ZEXE paper, which optimizes the ZEXE construction for use with universal SNARKs like PLONK: ia.cr/2022/802
+- Aleo, an implementation of ZEXE: aleo.org
+- High-level overview of ZEXE: https://anoma.net/blog/demystifying-zexe/
+- Extending the ZEXE system to support shared state: https://mirprotocol.org/blog/The-Mir-Execution-Environment
 
 
 
